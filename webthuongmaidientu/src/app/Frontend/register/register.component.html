@@ -13,24 +13,24 @@
                         <h2>REGISTER USER</h2>
                     </div>
                     <div class="form_group">
-                        <label for="email" class="form_label">Họ tên *</label>
-                        <input type="text" id="email" name="email" placeholder="example@domain.com" class="form_control"
-                            formControlName="email">
+                        <label for="hoten" class="form_label">Họ tên *</label>
+                        <input type="text" id="hoten" name="hoten" placeholder="example@domain.com" class="form_control"
+                            formControlName="hoten">
                         <!-- thông báo lỗi -->
-                        <div *ngIf="form.controls['email'].invalid && form.controls['email'].touched" class="">
-                            <div class="alert alert-danger" *ngIf="form.controls['email'].errors?.['required']">
+                        <div *ngIf="form.controls['hoten'].invalid && form.controls['hoten'].touched" class="">
+                            <div class="alert alert-danger" *ngIf="form.controls['hoten'].errors?.['required']">
                                 Vui lòng nhập họ tên
                             </div>
                         </div>
                         <!-- kết thúc errors -->
                     </div>
                     <div class="form_group">
-                        <label for="email" class="form_label">SDT *</label>
-                        <input type="text" id="email" name="email" placeholder="example@domain.com" class="form_control"
-                            formControlName="email">
+                        <label for="sdt" class="form_label">SDT *</label>
+                        <input type="text" id="sdt" name="sdt" placeholder="example@domain.com" class="form_control"
+                            formControlName="sdt">
                         <!-- thông báo lỗi -->
-                        <div *ngIf="form.controls['email'].invalid && form.controls['email'].touched" class="">
-                            <div class="alert alert-danger" *ngIf="form.controls['email'].errors?.['required']">
+                        <div *ngIf="form.controls['sdt'].invalid && form.controls['sdt'].touched" class="">
+                            <div class="alert alert-danger" *ngIf="form.controls['sdt'].errors?.['required']">
                                 Vui lòng nhập SDT
                             </div>
                         </div>
@@ -63,12 +63,7 @@
                         </div>
                         <!-- Kết thúc errors -->
                     </div>
-                    <div class="form_link">
-                        <a href="" class="form_link_fogotPass">Quên mật khẩu ?</a>
-                        <a class="form_link_register" routerLink="../register">Đăng ký</a>
-                    </div>
-                    <br>
-                    <button class="form_submit">Đăng nhập</button>
+                    <button class="form_submit">Đăng ký</button>
                 </form>
             </div>
         </div>

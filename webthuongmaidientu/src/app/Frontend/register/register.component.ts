@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -13,13 +14,11 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      name: this.fb.control('', Validators.required),
+      hoten: this.fb.control('', Validators.required),
       email: this.fb.control('', Validators.required),
       password: this.fb.control('', Validators.required),
-      cpassword: this.fb.control('', Validators.required),
-      address: this.fb.control('', Validators.required),
-      country: this.fb.control('', Validators.required),
-    })
+      sdt: this.fb.control('', Validators.required),
+    });
   }
 
   onSubmit() {
