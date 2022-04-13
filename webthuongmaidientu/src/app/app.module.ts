@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { NgxPaginationModule } from 'ngx-pagination';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './Frontend/Section//footer/footer.component';
@@ -12,6 +14,8 @@ import { HeadercarouselComponent } from './Frontend/Section/headercarousel/heade
 import { HomeComponent } from './Frontend/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './Frontend/register/register.component';
+import { CategoryproductComponent } from './Frontend/categoryproduct/categoryproduct.component';
+import { ProductdetailComponent } from './Frontend/productdetail/productdetail.component';
 
 @NgModule({
   declarations: [
@@ -22,14 +26,17 @@ import { RegisterComponent } from './Frontend/register/register.component';
     FormloginComponent,
     HeadercarouselComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    CategoryproductComponent,
+    ProductdetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
