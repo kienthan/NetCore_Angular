@@ -19,25 +19,19 @@
                         <!-- thông báo lỗi -->
                         <div *ngIf="form.controls['email'].invalid && form.controls['email'].touched" class="">
                             <div class="alert alert-danger" *ngIf="form.controls['email'].errors?.['required']">
-                                Vui lòng nhập Email
-                            </div>
-                            <div class="alert alert-secondary" *ngIf="form.controls['email'].errors?.['email']">
-                                Vui lòng nhập đúng cú pháp Email
+                                Vui lòng nhập họ tên
                             </div>
                         </div>
                         <!-- kết thúc errors -->
                     </div>
                     <div class="form_group">
-                        <label for="email" class="form_label">Phone *</label>
+                        <label for="email" class="form_label">SDT *</label>
                         <input type="text" id="email" name="email" placeholder="example@domain.com" class="form_control"
                             formControlName="email">
                         <!-- thông báo lỗi -->
                         <div *ngIf="form.controls['email'].invalid && form.controls['email'].touched" class="">
                             <div class="alert alert-danger" *ngIf="form.controls['email'].errors?.['required']">
-                                Vui lòng nhập Email
-                            </div>
-                            <div class="alert alert-secondary" *ngIf="form.controls['email'].errors?.['email']">
-                                Vui lòng nhập đúng cú pháp Email
+                                Vui lòng nhập SDT
                             </div>
                         </div>
                         <!-- kết thúc errors -->
