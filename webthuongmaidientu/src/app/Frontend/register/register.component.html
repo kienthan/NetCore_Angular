@@ -2,61 +2,79 @@
     <main>
         <div class="py-5 text-center">
             <img class="d-block mx-auto mb-4" src="/assets/img/logo.png" alt="" width="200px" height="auto">
-            <h2>REGISTER USER</h2>
+
 
         </div>
+        <div class="wrap">
 
-        <div class="row g-12">
-            <div class="col-md-12 col-lg-12">
-                <form class="needs-validation" [formGroup]="form" (ngSubmit)="onSubmit()">
-                    <div class="row g-3">
-
-                        <div class="col-sm-12">
-                            <label for="lastName" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="lastName" name="name" formControlName="name">
-                        </div>
-
-                        <div class="col-12">
-                            <label for="email" class="form-label">Email </label>
-                            <input type="email" class="form-control" id="email" placeholder="you@example.com"
-                                name="email" formControlName="email">
-                        </div>
-
-
-                        <div class="col-sm-12">
-                            <label for="lastName" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="lastName" name="password"
-                                formControlName="password">
-                        </div>
-
-
-                        <div class="col-sm-12">
-                            <label for="lastName" class="form-label">Comfirm Password</label>
-                            <input type="password" class="form-control" id="lastName" name="cpassword"
-                                formControlName="cpassword">
-                        </div>
-
-                        <div class="col-12">
-                            <label for="address" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="address" placeholder="1234 Main St"
-                                name="address" formControlName="address">
-                        </div>
-
-
-                        <div class="col-md-12">
-                            <label for="country" class="form-label">Country</label>
-
-                            <select class="form-select" id="country" name="country" formControlName="country">
-                                <option value="">Choose country</option>
-                                <option>Tp.hcm</option>
-                                <option>Ha Noi</option>
-                                <option>Khac </option>
-
-                            </select>
-                        </div>
+            <div class="main__form">
+                <form class="form" id="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div class="form_spacer">
+                        <h2>REGISTER USER</h2>
                     </div>
-                    <hr class="my-4">
-                    <button class="w-100 btn btn-outline-warning btn-lg">Register</button>
+                    <div class="form_group">
+                        <label for="email" class="form_label">Họ tên *</label>
+                        <input type="text" id="email" name="email" placeholder="example@domain.com" class="form_control"
+                            formControlName="email">
+                        <!-- thông báo lỗi -->
+                        <div *ngIf="form.controls['email'].invalid && form.controls['email'].touched" class="">
+                            <div class="alert alert-danger" *ngIf="form.controls['email'].errors?.['required']">
+                                Vui lòng nhập Email
+                            </div>
+                            <div class="alert alert-secondary" *ngIf="form.controls['email'].errors?.['email']">
+                                Vui lòng nhập đúng cú pháp Email
+                            </div>
+                        </div>
+                        <!-- kết thúc errors -->
+                    </div>
+                    <div class="form_group">
+                        <label for="email" class="form_label">Phone *</label>
+                        <input type="text" id="email" name="email" placeholder="example@domain.com" class="form_control"
+                            formControlName="email">
+                        <!-- thông báo lỗi -->
+                        <div *ngIf="form.controls['email'].invalid && form.controls['email'].touched" class="">
+                            <div class="alert alert-danger" *ngIf="form.controls['email'].errors?.['required']">
+                                Vui lòng nhập Email
+                            </div>
+                            <div class="alert alert-secondary" *ngIf="form.controls['email'].errors?.['email']">
+                                Vui lòng nhập đúng cú pháp Email
+                            </div>
+                        </div>
+                        <!-- kết thúc errors -->
+                    </div>
+                    <div class="form_group">
+                        <label for="email" class="form_label">Email *</label>
+                        <input type="text" id="email" name="email" placeholder="example@domain.com" class="form_control"
+                            formControlName="email">
+                        <!-- thông báo lỗi -->
+                        <div *ngIf="form.controls['email'].invalid && form.controls['email'].touched" class="">
+                            <div class="alert alert-danger" *ngIf="form.controls['email'].errors?.['required']">
+                                Vui lòng nhập Email
+                            </div>
+                            <div class="alert alert-secondary" *ngIf="form.controls['email'].errors?.['email']">
+                                Vui lòng nhập đúng cú pháp Email
+                            </div>
+                        </div>
+                        <!-- kết thúc errors -->
+                    </div>
+                    <div class="form_group">
+                        <label for="password" class="form_label">Password *</label>
+                        <input type="password" id="password" name="password" placeholder="Password" class="form_control"
+                            formControlName="password">
+                        <!-- Thông báo lỗi -->
+                        <div *ngIf="form.controls['password'].invalid && form.controls['password'].touched" class="">
+                            <div class="alert alert-danger" *ngIf="form.controls['password'].errors?.['required']">
+                                Mật khấu không được để trống
+                            </div>
+                        </div>
+                        <!-- Kết thúc errors -->
+                    </div>
+                    <div class="form_link">
+                        <a href="" class="form_link_fogotPass">Quên mật khẩu ?</a>
+                        <a class="form_link_register" routerLink="../register">Đăng ký</a>
+                    </div>
+                    <br>
+                    <button class="form_submit">Đăng nhập</button>
                 </form>
             </div>
         </div>
