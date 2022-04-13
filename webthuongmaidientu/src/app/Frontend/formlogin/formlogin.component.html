@@ -1,0 +1,41 @@
+<div class="wrap">
+    <div class="main__form">
+        <form class="form" id="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <h3 class="form_title">Đăng nhập</h3>
+            <div class="form_spacer"></div>
+            <div class="form_group">
+                <label for="email" class="form_label">Email *</label>
+                <input type="text" id="email" name="email" placeholder="example@domain.com" class="form_control"
+                    formControlName="email">
+                <!-- thông báo lỗi -->
+                <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched" class="">
+                    <div class="alert alert-danger" *ngIf="loginForm.controls['email'].errors?.['required']">
+                        Vui lòng nhập Email
+                    </div>
+                    <div class="alert alert-secondary" *ngIf="loginForm.controls['email'].errors?.['email']">
+                        Vui lòng nhập đúng cú pháp Email
+                    </div>
+                </div>
+                <!-- kết thúc errors -->
+            </div>
+            <div class="form_group">
+                <label for="password" class="form_label">Password *</label>
+                <input type="password" id="password" name="password" placeholder="Password" class="form_control"
+                    formControlName="password">
+                <!-- Thông báo lỗi -->
+                <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched" class="">
+                    <div class="alert alert-danger" *ngIf="loginForm.controls['password'].errors?.['required']">
+                        Mật khấu không được để trống
+                    </div>
+                </div>
+                <!-- Kết thúc errors -->
+            </div>
+            <div class="form_link">
+                <a href="" class="form_link_fogotPass">Quên mật khẩu ?</a>
+                <a class="form_link_register" routerLink="../register">Đăng ký</a>
+            </div>
+            <br>
+            <button class="form_submit">Đăng nhập</button>
+        </form>
+    </div>
+</div>

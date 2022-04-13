@@ -1,0 +1,257 @@
+.header {
+  width: 100%;
+}
+.header_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+.header_contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c8a00;
+  padding: 6px 100px;
+}
+.header_contact_phone {
+  color: white;
+  font-size: 1.2rem;
+}
+.header_contact a {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding-right: 15px;
+}
+.header_logo {
+  width: 25%;
+}
+.header_logo_img {
+  width: 50%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.header_menu {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+.header_menu_item {
+  margin-left: 2rem;
+  /* 1rem = 14px */
+  font-size: 1.3rem;
+  font-weight: 500;
+  position: relative;
+}
+.header_menu a {
+  color: rgba(0, 0, 0, 0.87);
+  transition: color 0.1s linear, border 0.1s linear;
+  font-family: "Montserrat", sans-serif;
+}
+.header_menu_item > a:hover {
+  border-bottom: 2px solid black;
+}
+.header_icon {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header_icon_item {
+  margin-left: 4rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.header_icon_item a {
+  color: rgba(0, 0, 0, 0.87);
+  position: relative;
+}
+.header_icon_item a span {
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  color: black;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 999px;
+  border: 1px solid black;
+  font-size: 11px;
+}
+.header_icon_item img {
+  width: 3.5rem;
+  cursor: pointer;
+}
+.header_icon_item_img {
+  position: relative;
+}
+.header_icon_item:hover i {
+  color: rgba(0, 0, 0, 0.685);
+}
+.header_body {
+  background-image: linear-gradient(
+    45deg,
+    rgba(2, 33, 64, 0.521) 10%,
+    rgba(45, 95, 93, 0.452) 0%
+  );
+  height: 93vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header_body_btn a {
+  display: inline-block;
+  padding: 2rem 6rem;
+  border: 2.5px solid white;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  transition: color 0.13s linear, border 0.13s ease-out;
+}
+.header_body_btn a:hover {
+  border: none;
+  background-color: black;
+  border: 2.5px solid black;
+}
+
+.header_wrap {
+  position: relative;
+  width: 99vw;
+  height: 55rem;
+}
+.header_slideShow {
+  width: 100%;
+  height: 570px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.header_img_title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header_img_title h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.header_img_title h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  font-size: 60px;
+  line-height: 1.2;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 37px;
+}
+.header_img_title a {
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+  border: none;
+  color: black;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  padding: 12px 35px;
+  text-transform: uppercase;
+  font-weight: 400;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.header_img_title a:hover {
+  background-color: #000;
+  color: white;
+}
+.main_product_list {
+  margin-top: 3rem;
+  margin-bottom: 5.5rem;
+}
+.main_product_item {
+  width: 100%;
+  height: 35rem;
+  position: relative;
+  overflow: hidden;
+}
+.main_product_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(80%);
+  overflow: hidden;
+  transition: 0.3s linear;
+}
+.main_product_item:hover img {
+  filter: brightness(40%);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.main_product_item .info {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -85%);
+}
+.main_product_item .info div {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+  color: white;
+}
+.main_product_item .info a {
+  color: #cebd9c !important;
+  font-size: 1.7rem;
+  font-weight: 500;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #ebd9b7;
+}
+.main_product_item .info a {
+  -webkit-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  -ms-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+.main_product .one {
+  background-image: linear-gradient(
+    45deg,
+    rgba(2, 33, 64, 0.521) 10%,
+    rgba(45, 95, 93, 0.452)
+  );
+}
+.main_product_item:hover .btnShopNow {
+  opacity: 1;
+  visibility: visible;
+}
+a {
+  text-decoration: none;
+}

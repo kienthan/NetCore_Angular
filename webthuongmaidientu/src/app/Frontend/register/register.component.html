@@ -1,0 +1,73 @@
+<div class="container">
+    <main>
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="/assets/img/logo.png" alt="" width="200px" height="auto">
+            <h2>REGISTER USER</h2>
+
+        </div>
+
+        <div class="row g-12">
+            <div class="col-md-12 col-lg-12">
+                <form class="needs-validation" [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div class="row g-3">
+
+                        <div class="col-sm-12">
+                            <label for="lastName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="lastName" name="name" formControlName="name">
+                        </div>
+
+                        <div class="col-12">
+                            <label for="email" class="form-label">Email </label>
+                            <input type="email" class="form-control" id="email" placeholder="you@example.com"
+                                name="email" formControlName="email">
+                        </div>
+
+
+                        <div class="col-sm-12">
+                            <label for="lastName" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="lastName" name="password"
+                                formControlName="password">
+                        </div>
+
+
+                        <div class="col-sm-12">
+                            <label for="lastName" class="form-label">Comfirm Password</label>
+                            <input type="password" class="form-control" id="lastName" name="cpassword"
+                                formControlName="cpassword">
+                        </div>
+
+                        <div class="col-12">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="1234 Main St"
+                                name="address" formControlName="address">
+                        </div>
+
+
+                        <div class="col-md-12">
+                            <label for="country" class="form-label">Country</label>
+
+                            <select class="form-select" id="country" name="country" formControlName="country">
+                                <option value="">Choose country</option>
+                                <option>Tp.hcm</option>
+                                <option>Ha Noi</option>
+                                <option>Khac </option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <button class="w-100 btn btn-outline-warning btn-lg">Register</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2017–2021 Company Name</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer>
+</div>

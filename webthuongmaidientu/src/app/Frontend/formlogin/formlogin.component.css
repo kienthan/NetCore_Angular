@@ -1,0 +1,113 @@
+.wrap {
+  max-width: 144rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.main__form {
+  margin-top: 5rem;
+}
+.form {
+  width: 360px;
+  padding: 32px 24px;
+  border-radius: 10px;
+  margin: 0 auto;
+  align-self: center;
+  box-shadow: 0 2px 50px 0 rgba(51, 62, 73, 0.199);
+  width: 360px;
+  min-height: 100px;
+  text-align: center;
+  color: #000000;
+}
+.form_title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding-bottom: 3rem;
+}
+.form_group {
+  display: flex;
+  margin-bottom: 5px;
+  flex-direction: column;
+}
+.form_label,
+.form_message {
+  text-align: left;
+}
+.form_label {
+  font-weight: 500;
+  padding-bottom: 6px;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+}
+.form_message {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  padding: 5px 0 0;
+}
+.form_control {
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  outline: none;
+  font-size: 1.2rem;
+}
+.form_link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form_link a {
+  text-align: right;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  padding: 3px 0 0;
+  position: relative;
+}
+.form_link_fogotPass::before,
+.form_link_register::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #000000;
+  border-radius: 3px;
+  transition: width 0.3s ease-out;
+}
+.form_link_fogotPass:hover::before,
+.form_link_register:hover::before {
+  width: 100%;
+}
+.form_submit {
+  outline: none;
+  background-color: black;
+  margin-top: 25px;
+  padding: 12px 16px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  width: 100%;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 5px;
+}
+.form_submit:hover {
+  background-color: rgba(0, 0, 0, 0.849);
+}
+
+.form_group.invalid .form_control {
+  border-color: #f33a58;
+}
+
+.form_group.invalid .form_message {
+  color: #f33a58;
+}
+a {
+  text-decoration: none;
+}
