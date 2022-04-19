@@ -16,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './Frontend/register/register.component';
 import { CategoryproductComponent } from './Frontend/categoryproduct/categoryproduct.component';
 import { ProductdetailComponent } from './Frontend/productdetail/productdetail.component';
+import { CartComponent } from './Frontend/cart/cart.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { ProductdetailComponent } from './Frontend/productdetail/productdetail.c
     HomeComponent,
     RegisterComponent,
     CategoryproductComponent,
-    ProductdetailComponent
+    ProductdetailComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { ProductdetailComponent } from './Frontend/productdetail/productdetail.c
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    ToastrModule
   ],
   providers: [],
   bootstrap: [AppComponent]

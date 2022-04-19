@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
+import { CartService } from 'src/app/cart.service';
 
 @Component({
   selector: 'app-productdetail',
@@ -14,7 +15,10 @@ export class ProductdetailComponent implements OnInit {
   ProductsDetail: any[] = [];
   page: number = 1;
 
-  constructor(private activeRoute: ActivatedRoute, private Api: ApiService) { }
+  // ------------
+  countPro: number = 1;
+
+  constructor(private activeRoute: ActivatedRoute, private Api: ApiService, private cart: CartService) { }
 
   ngOnInit(): void {
     this.activeRoute.params.subscribe(params => {
@@ -29,6 +33,21 @@ export class ProductdetailComponent implements OnInit {
       });
       console.log(this.ProductsDetail);
     })
+
+
+  }
+
+  increase() {
+    this.ProductsDetail[0].soLuong !== 10 ? this.ProductsDetail[0].soLuong++ : this.ProductsDetail[0].soLuong = 10
+  }
+
+  decrease() {
+    this.ProductsDetail[0].soLuong !== 1 ? this.ProductsDetail[0].soLuong-- : this.ProductsDetail[0].soLuong = 1
+  }
+
+  onClick() {
+    this.cart.addtoCart(this.ProductsDetail[0]);
+
   }
 
 }

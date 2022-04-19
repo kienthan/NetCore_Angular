@@ -29,7 +29,7 @@ export class ApiService {
       "img4": "./assets/img/4.jpg",
       "typeSanPhamId": 4,
       "sanPhamDetailId": 31,
-      "soLuong": 4,
+      "soLuong": 1,
       "stringPrice": "300.000đ"
     },
     {
@@ -46,7 +46,7 @@ export class ApiService {
       "img4": "./assets/img/a5.jpg",
       "typeSanPhamId": 4,
       "sanPhamDetailId": 33,
-      "soLuong": 4,
+      "soLuong": 1,
       "stringPrice": "280.000đ"
     },
     {
@@ -80,7 +80,7 @@ export class ApiService {
       "img4": "./assets/img/b4.jpg",
       "typeSanPhamId": 4,
       "sanPhamDetailId": 35,
-      "soLuong": 4,
+      "soLuong": 1,
       "stringPrice": "650.000đ"
     },
     {
@@ -97,7 +97,7 @@ export class ApiService {
       "img4": "./assets/img/b10.jpg",
       "typeSanPhamId": 4,
       "sanPhamDetailId": 36,
-      "soLuong": 2,
+      "soLuong": 1,
       "stringPrice": "95.000đ"
     },
     {
@@ -114,7 +114,7 @@ export class ApiService {
       "img4": "./assets/img/c4.jpg",
       "typeSanPhamId": 4,
       "sanPhamDetailId": 37,
-      "soLuong": 3,
+      "soLuong": 1,
       "stringPrice": "1.290.000đ"
     },
     {
@@ -131,7 +131,7 @@ export class ApiService {
       "img4": "./assets/img/d4.jpg",
       "typeSanPhamId": 4,
       "sanPhamDetailId": 41,
-      "soLuong": 2,
+      "soLuong": 1,
       "stringPrice": "850.000đ"
     },
     {
@@ -148,7 +148,7 @@ export class ApiService {
       "img4": "./assets/img/e5.jpg",
       "typeSanPhamId": 3,
       "sanPhamDetailId": 44,
-      "soLuong": 2,
+      "soLuong": 1,
       "stringPrice": "900.000đ"
     },
     {
@@ -335,7 +335,7 @@ export class ApiService {
       "img4": "./assets/img/AO_KHOAC_U1AKH12101BONHT_(ao_hodie_nam_u1akh12101bonht_toto_shop_(8)).jpg",
       "typeSanPhamId": 3,
       "sanPhamDetailId": 55,
-      "soLuong": 9,
+      "soLuong": 1,
       "stringPrice": "280.000đ"
     },
     {
@@ -369,7 +369,7 @@ export class ApiService {
       "img4": "./assets/img/c10.jpg",
       "typeSanPhamId": 3,
       "sanPhamDetailId": 58,
-      "soLuong": 6,
+      "soLuong": 1,
       "stringPrice": "1.100.000đ"
     },
     {
@@ -386,7 +386,7 @@ export class ApiService {
       "img4": "./assets/img/AO_HOODIE_U1AKH2041001_(Don_8).jpg",
       "typeSanPhamId": 3,
       "sanPhamDetailId": 59,
-      "soLuong": 17,
+      "soLuong": 1,
       "stringPrice": "280.000đ"
     },
     {
@@ -403,7 +403,7 @@ export class ApiService {
       "img4": "./assets/img/1d71a23ad4a41dfa44b564_4c29d777c70c41faa8f5913c997582ca_master.jpg",
       "typeSanPhamId": 3,
       "sanPhamDetailId": 60,
-      "soLuong": 19,
+      "soLuong": 1,
       "stringPrice": "280.000đ"
     },
     {

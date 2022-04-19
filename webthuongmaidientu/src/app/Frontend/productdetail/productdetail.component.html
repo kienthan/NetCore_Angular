@@ -1,68 +1,74 @@
-<div class="ProductDetail">
-    <div class="wrap">
-        <div class="row" *ngFor="let a of ProductsDetail">
-            <!-- Hình ảnh -->
-            <div class="col-lg-6 ProductDetail_img">
-                <div class="img_main">
-                    <img src={{a.mainImg}} alt="Hình ảnh">
-                    <!-- <span class="control prev">
-                        <i class="bx bx-chevron-left"></i>
-                    </span>
-                    <span class="control next">
-                        <i class="bx bx-chevron-right"></i>
-                    </span> -->
-                </div>
-                <!-- <div class="list_img">
-                    <div><img src="./assets/img/j1.jpg" alt=""></div>
-                    <div><img src="./assets/img/j2.jpg" alt=""></div>
-                    <div><img src="./assets/img/j3.jpg" alt=""></div>
-                    <div><img src="./assets/img/j4.jpg" alt=""></div>
-                </div> -->
-            </div>
-            <!-- Info -->
-
-            <div class="col-lg-6 ProductDetail_info">
-                <div class="ProductDetail_info_wrap">
-                    <div class="ProductDetail_info_name"> {{a.sanPhamName}} </div>
-                    <div class="ProductDetail_info_price">
-                        <span>{{a.stringPrice}}</span>
-
+<div class="container-fluid">
+    <div class="ProductDetail">
+        <div class="wrap">
+            <div class="row" *ngFor="let a of ProductsDetail">
+                <!-- Hình ảnh -->
+                <div class="col-lg-6 ProductDetail_img">
+                    <div class="img_main">
+                        <img src={{a.mainImg}} alt="Hình ảnh" width="450px" style="margin-left:30%">
+                        <span class="control prev">
+                            <i class="bx bx-chevron-left"></i>
+                        </span>
+                        <span class="control next">
+                            <i class="bx bx-chevron-right"></i>
+                        </span>
                     </div>
-                    <form>
-                        <div class="row mb-3">
-                            <span class="col-3" style="font-size: 1.5rem;">Kích thước</span>
-                            <div class="col-6">
-                                <select class="form-select">
-                                    <option selected>Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
-                            </div>
+                    <div class="list_img">
+                        <div><img src={{a.img1}} width="200px" alt=""></div>
+                        <div><img src={{a.img2}} width="200px" alt=""></div>
+                        <div><img src={{a.img3}} width="200px" alt=""></div>
+                        <div><img src={{a.img4}} width="200px" alt=""></div>
+                    </div>
+                </div>
+                <!-- Info -->
+
+                <div class="col-lg-6 ProductDetail_info">
+                    <div class="ProductDetail_info_wrap">
+                        <div class="ProductDetail_info_name"> {{a.sanPhamName}} </div>
+                        <div class="ProductDetail_info_price">
+                            <span>{{a.stringPrice}}</span>
+
                         </div>
-                        <div class="row">
-                            <div class="col-8">
-                                <span style="font-size:1.5rem;">Số lượng</span>
-                                <div class="btn-group" role="group" style="font-size:1.5rem; margin-left: 75px;">
-                                    <button type="button" class="btn btn-outline-dark">-</button>
-                                    <button type="button" class="btn btn-outline-dark"> 2 </button>
-                                    <button type="button" class="btn btn-outline-dark">+</button>
+                        <form>
+                            <div class="row mb-3">
+                                <span class="col-3" style="font-size: 1.5rem;">Kích thước</span>
+                                <div class="col-6">
+                                    <select class="form-select" style="width: 110px;border: 1px solid #000;">
+                                        <option selected>Open this select menu</option>
+                                        <option selected value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                        <option value="XXL">XXL</option>
+                                    </select>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-8">
+                                    <span style="font-size:1.5rem;">Số lượng</span>
+                                    <div class="btn-group" role="group" style="font-size:1.5rem; margin-left: 75px;">
+                                        <button type="button" class="btn btn-outline-dark"
+                                            (click)="decrease()">-</button>
+                                        <label class="btn btn-outline-dark"> {{a.soLuong}} </label>
+                                        <button type="button" class="btn btn-outline-dark"
+                                            (click)="increase()">+</button>
+                                    </div>
+                                </div>
 
+                            </div>
+                            <div class="d-grid gap-2 mb-3 mt-3">
+                                <button class="btn btn-outline-dark btn-lg" (click)="onClick()">THÊM VÀO GIỎ</button>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-dark btn-lg" (click)="onClick()">MUA NGAY</button>
+                            </div>
+                        </form>
+                        <div style="font-size:1.5rem;" class="mt-3">
+                            <span>Chi tiết sản phẩm:</span>
+                            <p>
+                                {{a.sanPhamDescription}}
+                            </p>
                         </div>
-                        <div class="d-grid gap-2 mb-3 mt-3">
-                            <button class="btn btn-outline-dark btn-lg">THÊM VÀO GIỎ</button>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-dark btn-lg">MUA NGAY</button>
-                        </div>
-                    </form>
-                    <div style="font-size:1.5rem;" class="mt-3">
-                        <span>Chi tiết sản phẩm:</span>
-                        <p>
-                            {{a.sanPhamDescription}}
-                        </p>
                     </div>
                 </div>
             </div>

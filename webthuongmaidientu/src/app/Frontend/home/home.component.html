@@ -13,7 +13,10 @@
             </div>
         </div>
         <div class="mt-5">
-            <pagination-controls (pageChange)="page = $event"></pagination-controls>
+            <pagination-controls (pageChange)="page = $event" previousLabel="" nextLabel=""
+                screenReaderPaginationLabel="Pagination" screenReaderPageLabel="page"
+                screenReaderCurrentLabel="You're on page">
+            </pagination-controls>
         </div>
     </div>
 </div>
