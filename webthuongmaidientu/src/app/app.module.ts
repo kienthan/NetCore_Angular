@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NgxPaginationModule } from 'ngx-pagination';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +19,6 @@ import { RegisterComponent } from './Frontend/register/register.component';
 import { CategoryproductComponent } from './Frontend/categoryproduct/categoryproduct.component';
 import { ProductdetailComponent } from './Frontend/productdetail/productdetail.component';
 import { CartComponent } from './Frontend/cart/cart.component';
-import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,14 @@ import { ToastrModule } from 'ngx-toastr';
     ReactiveFormsModule,
     HttpClientModule,
     NgxPaginationModule,
-    ToastrModule
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 1000,
+      // closeButton: true,
+      progressBar: true,
+      progressAnimation: 'increasing',
+      // preventDuplicates: true,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

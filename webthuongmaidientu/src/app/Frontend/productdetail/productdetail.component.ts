@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { CartService } from 'src/app/cart.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-productdetail',
@@ -18,7 +19,7 @@ export class ProductdetailComponent implements OnInit {
   // ------------
   countPro: number = 1;
 
-  constructor(private activeRoute: ActivatedRoute, private Api: ApiService, private cart: CartService) { }
+  constructor(private activeRoute: ActivatedRoute, private Api: ApiService, private cart: CartService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.activeRoute.params.subscribe(params => {
@@ -47,7 +48,7 @@ export class ProductdetailComponent implements OnInit {
 
   onClick() {
     this.cart.addtoCart(this.ProductsDetail[0]);
-
+    this.toastr.success('Thông báo', 'Đã thêm sản phẩm mới vào giỏ hàng');
   }
 
 }
