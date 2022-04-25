@@ -10,43 +10,79 @@
 
             <div><button class="btn_cartempty" routerLink="/">Continue Shopping </button></div>
         </div>
-
+        <!-- Cart not null -->
         <div *ngIf="cartList.length != 0" class="row" style="margin-top: 100px;">
 
-            <div class="col-md-7 col-lg-8 card" id="infocart" *ngFor="let a of cartList">
-                <div class="card-body row">
-                    <img class="col-3" src={{a.mainImg}} width="50px" />
-                    <p class="col-3" style="margin-top: 80px;">{{a.sanPhamName}} </p>
-                    <!-- <p> Size : {{a.}}</p> -->
-                    <p class="col-3" style="margin-top: 80px;">Price {{a.stringPrice}}</p>
-
-                    <div class="col-3" style="margin-top: 80px;">
-                        <span>Số lượng </span>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-outline-dark" (click)="decrease(a)">-</button>
-                            <label class="btn btn-outline-dark"> {{a.soLuong}} </label>
-                            <button type="button" class="btn btn-outline-dark" (click)="increase(a)">+</button>
-                        </div>
-                    </div>
-                    <p> </p>
-                </div>
-            </div>
-
-            <div class="card col-md-5 col-lg-4 order-md-last">
-                <div class="card-body">
-                    <h3 class="text-center"> Thông tin đơn hàng </h3>
+            <div class="col-md-12 col-lg-12 card" id="infocart">
+                <h1 class="text-center text-secondary"> Thông tin đơn hàng </h1>
+                <span class="text-i">
                     <p>Tạm tính ({{lengthcart}} sản phẩm) {{stringTotal}} đ</p>
-                    <p>Phí vận chuyển sẽ được tính ở trang thanh toán. Bạn cũng có thể nhập mã giảm giá ở trang thanh
+                    <p>Phí vận chuyển sẽ được tính ở trang thanh toán. Bạn cũng có thể nhập mã giảm giá ở trang
+                        thanh
                         toán.</p>
-                    <hr />
-                    <h4>Tổng cộng
-                        <span> {{stringTotal}} </span>
-                    </h4>
-                    <div class="text-center">
-                        <button class="btn btn-primary"> Đặt hàng</button>
+                </span>
+                <hr />
+                <div>
+                    <div class="card-body row">
+                        <!-- <img class="col-3" src={{a.mainImg}} width="50px" />
+                        <p class="col-3" style="margin-top: 80px;">{{a.sanPhamName}} </p>
+                        
+                        <p class="col-3" style="margin-top: 80px;">Price {{a.stringPrice}}</p>
+
+                        <div class="col-3" style="margin-top: 80px;">
+                            <span>Số lượng </span>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-outline-dark" (click)="decrease(a)">-</button>
+                                <label class="btn btn-outline-dark"> {{a.soLuong}} </label>
+                                <button type="button" class="btn btn-outline-dark" (click)="increase(a)">+</button>
+                            </div>
+                        </div>
+                        <div class="btn btn-outline-danger"> Xoá </div>
+                        <hr /> -->
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Sản phẩm</th>
+                                    <th scope="col">Tên</th>
+                                    <th scope="col">Giá tiền</th>
+                                    <th scope="col">Số lượng</th>
+                                    <th scope="col">Xoá</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let a of cartList">
+                                    <td><img class="" src={{a.mainImg}} width="100px" /></td>
+                                    <td>{{a.sanPhamName}}</td>
+                                    <td>{{a.stringPrice}}</td>
+                                    <td>
+                                        <div class="col-3" style="margin-top: 80px;">
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-outline-dark"
+                                                    (click)="decrease(a)">-</button>
+                                                <label class="btn btn-outline-dark"> {{a.soLuong}} </label>
+                                                <button type="button" class="btn btn-outline-dark"
+                                                    (click)="increase(a)">+</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="btn btn-outline-danger" (click)="deleteClick(a)"> Xoá </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
+                <h4 class="text-end text-danger mr-3">Tổng cộng:
+                    <span> {{stringTotal}} VNĐ</span>
+                </h4>
+                <div class="text-center">
+                    <button class="btn btn-outline-dark mb-3" routerLink="/payment"> Đặt hàng</button>
+                </div>
+
             </div>
+
 
         </div>
     </div>

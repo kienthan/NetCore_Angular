@@ -19,6 +19,7 @@ import { RegisterComponent } from './Frontend/register/register.component';
 import { CategoryproductComponent } from './Frontend/categoryproduct/categoryproduct.component';
 import { ProductdetailComponent } from './Frontend/productdetail/productdetail.component';
 import { CartComponent } from './Frontend/cart/cart.component';
+import { PaymentComponent } from './Frontend/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CartComponent } from './Frontend/cart/cart.component';
     RegisterComponent,
     CategoryproductComponent,
     ProductdetailComponent,
-    CartComponent
+    CartComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,

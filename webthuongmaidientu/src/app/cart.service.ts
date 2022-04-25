@@ -9,6 +9,7 @@ export class CartService {
   public cartItemlist: any[] = [];
   public productList = new BehaviorSubject<any>([]);
   public grandTotal: number = 0;
+  public check: string = ""
 
   constructor() { }
 
@@ -32,7 +33,7 @@ export class CartService {
 
     }
     else {
-      alert("Sản phẩm đã có trong giỏ hàng")
+      this.check = "tontai";
     }
   }
 

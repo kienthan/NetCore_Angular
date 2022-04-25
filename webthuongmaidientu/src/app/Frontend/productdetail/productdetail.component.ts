@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { CartService } from 'src/app/cart.service';
 import { ToastrService } from 'ngx-toastr';
@@ -15,11 +15,11 @@ export class ProductdetailComponent implements OnInit {
   Products: any[] = [];
   ProductsDetail: any[] = [];
   page: number = 1;
-
+  size: string = "";
   // ------------
   countPro: number = 1;
 
-  constructor(private activeRoute: ActivatedRoute, private Api: ApiService, private cart: CartService, private toastr: ToastrService) { }
+  constructor(private activeRoute: ActivatedRoute, private Api: ApiService, private cart: CartService, private toastr: ToastrService, private router: Router) { }
 
   ngOnInit(): void {
     this.activeRoute.params.subscribe(params => {
@@ -48,7 +48,11 @@ export class ProductdetailComponent implements OnInit {
 
   onClick() {
     this.cart.addtoCart(this.ProductsDetail[0]);
-    this.toastr.success('Thông báo', 'Đã thêm sản phẩm mới vào giỏ hàng');
+    if (this.cart.check === "tontai") {
+
+      this.toastr.warning('Thông báo', 'Sản phẩm đã có trong giỏ hàng');
+    }
+    this.router.navigate(['/cart'])
   }
 
 }

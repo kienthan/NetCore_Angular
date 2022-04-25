@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { CartService } from 'src/app/cart.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class CartComponent implements OnInit {
   lengthcart: number = 0;
   stringTotal: string = "";
 
-  constructor(private cart: CartService) { }
+  constructor(private cart: CartService, private toatr: ToastrService) { }
 
   ngOnInit(): void {
 
@@ -38,5 +39,13 @@ export class CartComponent implements OnInit {
     this.total = this.cart.getTotalPrice();
     this.stringTotal = this.total.toLocaleString()
   }
+
+  deleteClick(product: any) {
+    this.cart.removeCartItem(product);
+    this.toatr.success("Thông báo", "Đã xoá sản phẩm trong giỏ hàng " + product.sanPhamName);
+    this.total = this.cart.getTotalPrice();
+    this.stringTotal = this.total.toLocaleString();
+  }
+
 
 }
