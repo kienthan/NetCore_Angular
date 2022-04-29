@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { CartService } from 'src/app/cart.service';
 
 @Component({
@@ -8,13 +10,16 @@ import { CartService } from 'src/app/cart.service';
 })
 export class HeaderComponent implements OnInit {
 
-  cartList: any[] = [];
-  cartLength: number = 0;
-  constructor(private cart: CartService) { }
+  formSearch: FormGroup | any;
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-
+    this.formSearch = new FormGroup({
+      search: new FormControl('', Validators.required)
+    })
   }
 
-
+  onSubmit() {
+    this.router.navigate(["/search/" + this.formSearch.value.search])
+  }
 }

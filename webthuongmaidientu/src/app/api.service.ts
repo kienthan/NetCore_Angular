@@ -10,9 +10,9 @@ export class ApiService {
   url = "https://localhost:44305/api/"
   constructor(private httpCLient: HttpClient) { }
 
-  // getProducts(): Observable<any> {
-  //   return this.httpCLient.get<any>(this.url + 'SanPhams');
-  // }
+  getProduct(): Observable<any> {
+    return this.httpCLient.get<any>(this.url + 'SanPhams', { responseType: "json" });
+  }
 
   Product: any = [
     {

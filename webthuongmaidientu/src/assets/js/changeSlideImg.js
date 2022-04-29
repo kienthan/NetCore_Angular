@@ -1,6 +1,6 @@
 var num;
 var temp = 0;
-var speed = 3000; /* this is set for 5 seconds, edit value to suit requirements */
+var speed = 2000; /* this is set for 5 seconds, edit value to suit requirements */
 var preloads = [];
 /* add any number of images here */
 preload(

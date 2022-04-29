@@ -14,12 +14,12 @@
         <div *ngIf="cartList.length != 0" class="row" style="margin-top: 100px;">
 
             <div class="col-md-12 col-lg-12 card" id="infocart">
-                <h1 class="text-center text-secondary"> Thông tin đơn hàng </h1>
-                <span class="text-i">
-                    <p>Tạm tính ({{lengthcart}} sản phẩm) {{stringTotal}} đ</p>
-                    <p>Phí vận chuyển sẽ được tính ở trang thanh toán. Bạn cũng có thể nhập mã giảm giá ở trang
+                <h1 class="text-center text-dark text-uppercase"> Thông tin đơn hàng </h1>
+                <span class="fst-italic text-center">
+                    <small>Tạm tính ({{lengthcart}} sản phẩm) {{stringTotal}} đ <br /></small>
+                    <small>Phí vận chuyển sẽ được tính ở trang thanh toán. Bạn cũng có thể nhập mã giảm giá ở trang
                         thanh
-                        toán.</p>
+                        toán.</small>
                 </span>
                 <hr />
                 <div>
@@ -43,6 +43,7 @@
                         <table class="table">
                             <thead>
                                 <tr>
+                                    <th scope="col">Số thứ tự</th>
                                     <th scope="col">Sản phẩm</th>
                                     <th scope="col">Tên</th>
                                     <th scope="col">Giá tiền</th>
@@ -51,8 +52,9 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor="let a of cartList">
-                                    <td><img class="" src={{a.mainImg}} width="100px" /></td>
+                                <tr *ngFor="let a of cartList;index as i ">
+                                    <td> {{i+1}} </td>
+                                    <td><img src={{a.mainImg}} width="100px" /></td>
                                     <td>{{a.sanPhamName}}</td>
                                     <td>{{a.stringPrice}}</td>
                                     <td>

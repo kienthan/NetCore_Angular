@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   constructor(private Api: ApiService) { }
 
   ngOnInit(): void {
-    // this.Api.getProducts().subscribe(res => {
+    // this.Api.getProduct().subscribe(res => {
     //   this.Products1 = res
     //   console.log(this.Products1)
     // })

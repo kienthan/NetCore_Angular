@@ -3,11 +3,11 @@
     <nav class="header_title">
 
         <div class="header_logo text-center">
-            <a routerLink="/home"><img src="/assets/img/logo.png" alt="" class="header_logo_img"></a>
+            <a routerLink="/home"><img src="../assets/img/logo.png" alt="" class="header_logo_img"></a>
         </div>
 
         <ul class="header_menu" style="font-size: 16px;">
-            <li class="header_menu_item"><a routerLink="/home">Home</a></li>
+            <li class="header_menu_item"><a routerLink="/">Home</a></li>
             <li class="header_menu_item"><a routerLink="/category/1">Áo thun</a></li>
             <li class="header_menu_item"><a routerLink="/category/2">Quần</a></li>
             <li class="header_menu_item"><a routerLink="/category/3">Áo khoác</a></li>
@@ -16,7 +16,6 @@
         </ul>
 
         <ul class="header_icon">
-            <li class="header_icon_item"><a href=""><i class="fas fa-search"></i></a></li>
             <li class="header_icon_item">
                 <a routerLink="/cart">
                     <i class="fas fa-shopping-cart"></i>
@@ -28,6 +27,15 @@
             <li class="header_icon_item ">
                 <a routerLink="login"><i class="fas fa-user"></i></a>
             </li>
+            <li class="header_icon_item" style="margin-right: 10px;">
+                <form class="d-flex" (ngSubmit)="onSubmit()" [formGroup]="formSearch">
+                    <input class="form-control me-2" type="search" placeholder="Tìm kiếm" formControlName="search">
+                    <button class="btn btn-outline-dark" type="submit"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </li>
+
+
         </ul>
     </nav>
 </div>

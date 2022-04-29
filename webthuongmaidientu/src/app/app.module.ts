@@ -20,6 +20,7 @@ import { CategoryproductComponent } from './Frontend/categoryproduct/categorypro
 import { ProductdetailComponent } from './Frontend/productdetail/productdetail.component';
 import { CartComponent } from './Frontend/cart/cart.component';
 import { PaymentComponent } from './Frontend/payment/payment.component';
+import { SearchComponent } from './Frontend/search/search.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { PaymentComponent } from './Frontend/payment/payment.component';
     CategoryproductComponent,
     ProductdetailComponent,
     CartComponent,
-    PaymentComponent
+    PaymentComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

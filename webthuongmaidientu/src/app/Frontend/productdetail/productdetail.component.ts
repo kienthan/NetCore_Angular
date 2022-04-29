@@ -24,7 +24,6 @@ export class ProductdetailComponent implements OnInit {
   ngOnInit(): void {
     this.activeRoute.params.subscribe(params => {
       this.id = params["id"];
-      console.log(this.id);
       //-----------------------------
       this.Products = this.Api.Product;
       //Fitler Arraylist
@@ -32,7 +31,6 @@ export class ProductdetailComponent implements OnInit {
       this.ProductsDetail = this.Products.filter(item => {
         return this.id == item.sanPhamId;
       });
-      console.log(this.ProductsDetail);
     })
 
 
@@ -48,11 +46,11 @@ export class ProductdetailComponent implements OnInit {
 
   onClick() {
     this.cart.addtoCart(this.ProductsDetail[0]);
-    if (this.cart.check === "tontai") {
-
-      this.toastr.warning('Thông báo', 'Sản phẩm đã có trong giỏ hàng');
-    }
+    this.cart.check === "tontai" ? this.toastr.warning('Thông báo', 'Sản phẩm đã có trong giỏ hàng') : this.toastr.success('Thông báo', 'Sản phẩm đã được thêm giỏ hàng');
+    //this.router.navigate(['/cart'])
+  }
+  buyNow() {
+    this.cart.addtoCart(this.ProductsDetail[0]);
     this.router.navigate(['/cart'])
   }
-
 }
