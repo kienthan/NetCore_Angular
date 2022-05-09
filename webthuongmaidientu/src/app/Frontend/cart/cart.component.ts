@@ -20,24 +20,25 @@ export class CartComponent implements OnInit {
 
     this.cart.getProducts().subscribe(item => {
       this.cartList = item;
-      console.log(this.cartList)
     })
     this.total = this.cart.getTotalPrice();
     this.lengthcart = this.cartList.length;
     this.stringTotal = this.total.toLocaleString()
+    this.cart.cartLength = this.lengthcart;
   }
 
   decrease(product: any) {
-    console.log(product)
     this.cart.decrease(product);
     this.total = this.cart.getTotalPrice();
     this.stringTotal = this.total.toLocaleString()
+    this.cart.cartLength = this.lengthcart;
   }
 
   increase(product: any) {
     this.cart.increase(product);
     this.total = this.cart.getTotalPrice();
     this.stringTotal = this.total.toLocaleString()
+    this.cart.cartLength = this.lengthcart;
   }
 
   deleteClick(product: any) {
@@ -45,6 +46,7 @@ export class CartComponent implements OnInit {
     this.toatr.success("Thông báo", "Đã xoá sản phẩm trong giỏ hàng " + product.sanPhamName);
     this.total = this.cart.getTotalPrice();
     this.stringTotal = this.total.toLocaleString();
+    this.cart.cartLength = this.lengthcart;
   }
 
 

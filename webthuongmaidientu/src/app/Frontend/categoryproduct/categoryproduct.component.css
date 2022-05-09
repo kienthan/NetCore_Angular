@@ -1,3 +1,13 @@
 .box{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    transition: 0.2s linear;
+}
+.box :hover{
+    transform: scale(1.1);
     cursor: pointer;
+    transition: 0.3s linear;
 }

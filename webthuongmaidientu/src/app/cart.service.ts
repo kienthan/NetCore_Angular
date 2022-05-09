@@ -10,6 +10,7 @@ export class CartService {
   public productList = new BehaviorSubject<any>([]);
   public grandTotal: number = 0;
   public check: string = ""
+  public cartLength: number = 0;
 
   constructor() { }
 
@@ -59,7 +60,6 @@ export class CartService {
     // this.cartItemlist.map((a: any) => {
     //   grandTotal += (a.price * a.count);
     // })
-
     const res = this.cartItemlist.reduce((prev, item) => {
       return prev + (item.sanPhamPrice * item.soLuong);
     }, 0)

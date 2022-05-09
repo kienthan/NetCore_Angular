@@ -1,6 +1,6 @@
 var num;
 var temp = 0;
-var speed = 2000; /* this is set for 5 seconds, edit value to suit requirements */
+var speed = 2500;
 var preloads = [];
 /* add any number of images here */
 preload(
@@ -36,7 +36,7 @@ if (window.addEventListener) {
     function () {
       setTimeout(function () {
         rotateImages();
-      }, speed);
+      }, 0);
     },
     false
   );

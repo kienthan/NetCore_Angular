@@ -16,12 +16,18 @@ export class ProductdetailComponent implements OnInit {
   ProductsDetail: any[] = [];
   page: number = 1;
   size: string = "";
+  changeImg: string = "";
   // ------------
   countPro: number = 1;
 
   constructor(private activeRoute: ActivatedRoute, private Api: ApiService, private cart: CartService, private toastr: ToastrService, private router: Router) { }
 
   ngOnInit(): void {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
     this.activeRoute.params.subscribe(params => {
       this.id = params["id"];
       //-----------------------------
@@ -32,8 +38,7 @@ export class ProductdetailComponent implements OnInit {
         return this.id == item.sanPhamId;
       });
     })
-
-
+    this.changeImg = this.ProductsDetail[0].mainImg;
   }
 
   increase() {
@@ -52,5 +57,10 @@ export class ProductdetailComponent implements OnInit {
   buyNow() {
     this.cart.addtoCart(this.ProductsDetail[0]);
     this.router.navigate(['/cart'])
+  }
+
+
+  onClickImage(urlImg: string) {
+    this.changeImg = urlImg
   }
 }

@@ -3,9 +3,11 @@
         <div class="wrap">
             <div class="row" *ngFor="let a of ProductsDetail">
                 <!-- Hình ảnh -->
-                <div class="col-lg-6 ProductDetail_img">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 ProductDetail_img" style="padding: 0 20px;">
                     <div class="img_main">
-                        <img src={{a.mainImg}} alt="Hình ảnh" width="450px" style="margin-left:30%">
+                        <div class="text-center">
+                            <img src={{changeImg}} alt="Hình ảnh" width="500px" height="500p">
+                        </div>
                         <span class="control prev">
                             <i class="bx bx-chevron-left"></i>
                         </span>
@@ -14,10 +16,11 @@
                         </span>
                     </div>
                     <div class="list_img">
-                        <div><img src={{a.img1}} width="200px" alt=""></div>
-                        <div><img src={{a.img2}} width="200px" alt=""></div>
-                        <div><img src={{a.img3}} width="200px" alt=""></div>
-                        <div><img src={{a.img4}} width="200px" alt=""></div>
+                        <div (click)="onClickImage(a.mainImg)"><img src={{a.mainImg}} width="150px" alt=""></div>
+                        <div (click)="onClickImage(a.img1)"><img src={{a.img1}} width="150px" alt=""></div>
+                        <div (click)="onClickImage(a.img2)"><img src={{a.img2}} width="150px" alt=""></div>
+                        <div (click)="onClickImage(a.img3)"><img src={{a.img3}} width="150px" alt=""></div>
+                        <div (click)="onClickImage(a.img4)"><img src={{a.img4}} width="150px" alt=""></div>
                     </div>
                 </div>
                 <!-- Info -->

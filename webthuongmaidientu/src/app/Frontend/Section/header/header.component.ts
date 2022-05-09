@@ -11,11 +11,19 @@ import { CartService } from 'src/app/cart.service';
 export class HeaderComponent implements OnInit {
 
   formSearch: FormGroup | any;
-  constructor(private router: Router) { }
+  cartList: any[] = [];
+  cartLength: number = 0;
+
+  constructor(private router: Router, private cartApi: CartService) { }
 
   ngOnInit(): void {
     this.formSearch = new FormGroup({
       search: new FormControl('', Validators.required)
+    })
+
+    this.cartApi.getProducts().subscribe(item => {
+      this.cartList = item;
+      this.cartLength = this.cartList.length
     })
   }
 
