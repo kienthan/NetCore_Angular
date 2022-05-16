@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { Product } from './Frontend/Model/product';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class ApiService {
     return this.httpCLient.get<any>(this.url + 'SanPhams', { responseType: "json" });
   }
 
-  Product: any = [
+  Product: Product[] = [
     {
       "sanPhamId": 41,
       "sanPhamName": "Túi Mini Nebulus",
@@ -30,7 +31,8 @@ export class ApiService {
       "typeSanPhamId": 4,
       "sanPhamDetailId": 31,
       "soLuong": 1,
-      "stringPrice": "300.000đ"
+      "stringPrice": "300.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 43,
@@ -47,7 +49,8 @@ export class ApiService {
       "typeSanPhamId": 4,
       "sanPhamDetailId": 33,
       "soLuong": 1,
-      "stringPrice": "280.000đ"
+      "stringPrice": "280.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 45,
@@ -64,7 +67,8 @@ export class ApiService {
       "typeSanPhamId": 4,
       "sanPhamDetailId": 34,
       "soLuong": 1,
-      "stringPrice": "950.000đ"
+      "stringPrice": "950.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 46,
@@ -81,7 +85,8 @@ export class ApiService {
       "typeSanPhamId": 4,
       "sanPhamDetailId": 35,
       "soLuong": 1,
-      "stringPrice": "650.000đ"
+      "stringPrice": "650.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 47,
@@ -98,7 +103,8 @@ export class ApiService {
       "typeSanPhamId": 4,
       "sanPhamDetailId": 36,
       "soLuong": 1,
-      "stringPrice": "95.000đ"
+      "stringPrice": "95.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 48,
@@ -115,7 +121,8 @@ export class ApiService {
       "typeSanPhamId": 4,
       "sanPhamDetailId": 37,
       "soLuong": 1,
-      "stringPrice": "1.290.000đ"
+      "stringPrice": "1.290.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 52,
@@ -132,7 +139,8 @@ export class ApiService {
       "typeSanPhamId": 4,
       "sanPhamDetailId": 41,
       "soLuong": 1,
-      "stringPrice": "850.000đ"
+      "stringPrice": "850.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 55,
@@ -149,7 +157,8 @@ export class ApiService {
       "typeSanPhamId": 3,
       "sanPhamDetailId": 44,
       "soLuong": 1,
-      "stringPrice": "900.000đ"
+      "stringPrice": "900.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 56,
@@ -165,8 +174,9 @@ export class ApiService {
       "img4": "./assets/img/r5.jpg",
       "typeSanPhamId": 1,
       "sanPhamDetailId": 45,
-      "soLuong": 27,
-      "stringPrice": "370.000đ"
+      "soLuong": 1,
+      "stringPrice": "370.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 57,
@@ -182,8 +192,9 @@ export class ApiService {
       "img4": "./assets/img/r10.jpg",
       "typeSanPhamId": 1,
       "sanPhamDetailId": 46,
-      "soLuong": 36,
-      "stringPrice": "370.000đ"
+      "soLuong": 1,
+      "stringPrice": "370.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 58,
@@ -199,8 +210,9 @@ export class ApiService {
       "img4": "./assets/img/t5.jpg",
       "typeSanPhamId": 1,
       "sanPhamDetailId": 47,
-      "soLuong": 30,
-      "stringPrice": "370.000đ"
+      "soLuong": 1,
+      "stringPrice": "370.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 59,
@@ -216,8 +228,9 @@ export class ApiService {
       "img4": "./assets/img/t10.jpg",
       "typeSanPhamId": 1,
       "sanPhamDetailId": 48,
-      "soLuong": 0,
-      "stringPrice": "370.000đ"
+      "soLuong": 1,
+      "stringPrice": "370.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 60,
@@ -233,8 +246,9 @@ export class ApiService {
       "img4": "./assets/img/z5.jpg",
       "typeSanPhamId": 1,
       "sanPhamDetailId": 49,
-      "soLuong": 26,
-      "stringPrice": "370.000đ"
+      "soLuong": 1,
+      "stringPrice": "370.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 61,
@@ -250,8 +264,9 @@ export class ApiService {
       "img4": "./assets/img/z10.jpg",
       "typeSanPhamId": 1,
       "sanPhamDetailId": 50,
-      "soLuong": 0,
-      "stringPrice": "370.000đ"
+      "soLuong": 1,
+      "stringPrice": "370.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 62,
@@ -267,8 +282,9 @@ export class ApiService {
       "img4": "./assets/img/aa5.jpg",
       "typeSanPhamId": 1,
       "sanPhamDetailId": 51,
-      "soLuong": 42,
-      "stringPrice": "295.000đ"
+      "soLuong": 1,
+      "stringPrice": "295.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 63,
@@ -284,8 +300,9 @@ export class ApiService {
       "img4": "./assets/img/p5.jpg",
       "typeSanPhamId": 1,
       "sanPhamDetailId": 52,
-      "soLuong": 31,
-      "stringPrice": "295.000đ"
+      "soLuong": 1,
+      "stringPrice": "295.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 64,
@@ -301,8 +318,9 @@ export class ApiService {
       "img4": "./assets/img/k4.jpeg",
       "typeSanPhamId": 1,
       "sanPhamDetailId": 53,
-      "soLuong": 52,
-      "stringPrice": "590.000đ"
+      "soLuong": 1,
+      "stringPrice": "590.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 65,
@@ -318,8 +336,9 @@ export class ApiService {
       "img4": "./assets/img/n5.jpg",
       "typeSanPhamId": 1,
       "sanPhamDetailId": 54,
-      "soLuong": 42,
-      "stringPrice": "350.000đ"
+      "soLuong": 1,
+      "stringPrice": "350.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 66,
@@ -336,7 +355,8 @@ export class ApiService {
       "typeSanPhamId": 3,
       "sanPhamDetailId": 55,
       "soLuong": 1,
-      "stringPrice": "280.000đ"
+      "stringPrice": "280.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 67,
@@ -352,8 +372,9 @@ export class ApiService {
       "img4": "./assets/img/AO_HOODIE_U1AKH11101SONHT_(ao_hodie_nam_u1akh11101sonht_toto_shop_(9)).jpg",
       "typeSanPhamId": 3,
       "sanPhamDetailId": 56,
-      "soLuong": 29,
-      "stringPrice": "280.000đ"
+      "soLuong": 1,
+      "stringPrice": "280.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 69,
@@ -370,7 +391,8 @@ export class ApiService {
       "typeSanPhamId": 3,
       "sanPhamDetailId": 58,
       "soLuong": 1,
-      "stringPrice": "1.100.000đ"
+      "stringPrice": "1.100.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 70,
@@ -387,7 +409,8 @@ export class ApiService {
       "typeSanPhamId": 3,
       "sanPhamDetailId": 59,
       "soLuong": 1,
-      "stringPrice": "280.000đ"
+      "stringPrice": "280.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 71,
@@ -404,7 +427,8 @@ export class ApiService {
       "typeSanPhamId": 3,
       "sanPhamDetailId": 60,
       "soLuong": 1,
-      "stringPrice": "280.000đ"
+      "stringPrice": "280.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 72,
@@ -420,8 +444,9 @@ export class ApiService {
       "img4": "./assets/img/e4a59ff6d39a1bc4428b46_c0b3d0b8c7944435baad966f41a27ca9_master.jpg",
       "typeSanPhamId": 3,
       "sanPhamDetailId": 61,
-      "soLuong": 25,
-      "stringPrice": "280.000đ"
+      "soLuong": 1,
+      "stringPrice": "280.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 73,
@@ -437,8 +462,9 @@ export class ApiService {
       "img4": "./assets/img/j5.jpg",
       "typeSanPhamId": 2,
       "sanPhamDetailId": 62,
-      "soLuong": 56,
-      "stringPrice": "425.000đ"
+      "soLuong": 1,
+      "stringPrice": "425.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 74,
@@ -454,8 +480,9 @@ export class ApiService {
       "img4": "./assets/img/j10.jpg",
       "typeSanPhamId": 2,
       "sanPhamDetailId": 63,
-      "soLuong": 0,
-      "stringPrice": "425.000đ"
+      "soLuong": 1,
+      "stringPrice": "425.000đ",
+      "size": "",
     },
     {
       "sanPhamId": 75,
@@ -471,8 +498,9 @@ export class ApiService {
       "img4": "./assets/img/j15.jpg",
       "typeSanPhamId": 2,
       "sanPhamDetailId": 64,
-      "soLuong": 0,
-      "stringPrice": "425.000đ"
+      "soLuong": 1,
+      "stringPrice": "425.000đ",
+      "size": "",
     }
   ];
 
