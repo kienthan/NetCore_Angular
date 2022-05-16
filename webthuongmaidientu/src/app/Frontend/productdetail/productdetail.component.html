@@ -3,17 +3,17 @@
         <div class="wrap">
             <div class="row" *ngFor="let a of ProductsDetail">
                 <!-- Hình ảnh -->
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 ProductDetail_img" style="padding: 0 20px;">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 ProductDetail_img">
                     <div class="img_main">
                         <div class="text-center">
                             <img src={{changeImg}} alt="Hình ảnh" width="500px" height="500p">
                         </div>
-                        <span class="control prev">
+                        <!-- <span class="control prev">
                             <i class="bx bx-chevron-left"></i>
                         </span>
                         <span class="control next">
                             <i class="bx bx-chevron-right"></i>
-                        </span>
+                        </span> -->
                     </div>
                     <div class="list_img">
                         <div (click)="onClickImage(a.mainImg)"><img src={{a.mainImg}} width="150px" alt=""></div>
@@ -33,34 +33,33 @@
 
                         </div>
                         <form>
-                            <!-- <div class="row mb-3">
-                                <span class="col-3" style="font-size: 1.5rem;">Kích thước</span>
-                                <div class="col-6">
+                            <div class="row mb-3">
+                                <span class="col-4" style="font-size: 1.5rem;">Kích thước</span>
+                                <div class="col-8">
                                     <select class="form-select" style="width: 110px;border: 1px solid #000;">
-                                        <option selected>Open this select menu</option>
-                                        <option selected value="S">S</option>
-                                        <option value="M">M</option>
-                                        <option value="L">L</option>
-                                        <option value="XL">XL</option>
-                                        <option value="XXL">XXL</option>
+                                        <option *ngFor="let s of listSize" value={{s.size}}
+                                            (click)="changeSize(s.size)">
+                                            {{s.size}} </option>
                                     </select>
                                 </div>
-                            </div> -->
+                            </div>
                             <div class="row">
-                                <div class="col-8">
+                                <div class="col-4">
                                     <span style="font-size:1.5rem;">Số lượng</span>
-                                    <div class="btn-group" role="group" style="font-size:1.5rem; margin-left: 75px;">
-                                        <button type="button" class="btn btn-outline-dark"
-                                            (click)="decrease()">-</button>
+                                </div>
+                                <div class="col-8">
+                                    <div class="btn-group" role="group" style="font-size:1.5rem;">
+                                        <button type=" button" class="btn btn-outline-dark" (click)="decrease()">
+                                            -</button>
                                         <label class="btn btn-outline-dark"> {{a.soLuong}} </label>
                                         <button type="button" class="btn btn-outline-dark"
                                             (click)="increase()">+</button>
                                     </div>
                                 </div>
-
                             </div>
                             <div class="d-grid gap-2 mb-3 mt-3">
-                                <button class="btn btn-outline-dark btn-lg" (click)="onClick()">THÊM VÀO GIỎ</button>
+                                <button class="btn btn-outline-dark btn-lg" (click)="onClick()">THÊM VÀO
+                                    GIỎ</button>
                             </div>
                             <div class="d-grid gap-2">
                                 <button class="btn btn-dark btn-lg" (click)="buyNow()">MUA NGAY</button>

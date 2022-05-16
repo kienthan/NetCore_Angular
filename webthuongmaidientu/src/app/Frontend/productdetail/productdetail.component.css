@@ -1,9 +1,6 @@
 .ProductDetail {
     margin-top: 50px;
   }
-  .ProductDetail_img {
-    
-  }
   .ProductDetail_img .img_main {
     width: 60rem;
     margin: 0 auto;
@@ -187,4 +184,8 @@
   .next {
     right: -10px;
   }
-  
+  .btn-outline-dark:hover {
+    color: #212529;
+    border-color: #212529;
+    background-color: #fff;
+  }

@@ -16,11 +16,11 @@
         </ul>
 
         <ul class="header_icon" style="margin-right: 20px;">
-            <li class="header_icon_item" style="margin-right: 10px;">
+            <li class="header_icon_item">
                 <form class="d-flex" (ngSubmit)="onSubmit()" [formGroup]="formSearch">
                     <input class="form-control me-2" type="search" placeholder="Tìm kiếm" formControlName="search">
-                    <button class="btn btn-outline-dark" type="submit"><i
-                            class="fa-solid fa-magnifying-glass"></i></button>
+                    <!-- <button class="btn btn-dark" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i></button> -->
                 </form>
             </li>
             <li class="header_icon_item">
