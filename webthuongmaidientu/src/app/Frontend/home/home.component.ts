@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
 
   Products: any[] = [];
   Products1: any[] = [];
+  Products2: any[] = [];
 
   page: number = 1;
   constructor(private Api: ApiService) { }
@@ -20,7 +21,7 @@ export class HomeComponent implements OnInit {
     //   console.log(this.Products1)
     // })
     this.Products = this.Api.Product
-
+    this.Products2 = this.Api.Products2
 
   }
 

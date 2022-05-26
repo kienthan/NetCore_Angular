@@ -2,9 +2,11 @@
     <div class="row">
         <div class="col-3" *ngFor="let a of listProductCategory">
             <div class="box" [routerLink]="['/product/', a.sanPhamId]">
-                <img src="{{ a.mainImg }}" class="card-img-top" alt="" style="width: 300px; height: 300px" />
+                <div class="box-img">
+                    <img src="{{ a.mainImg }}" class="card-img-top" alt="" style="width: 250px; height: 250px" />
+                </div>
                 <div class="card-body">
-                    <h5 class="card-text text-uppercase">{{ a.sanPhamId }}</h5>
+                    <!-- <h5 class="card-text text-uppercase">{{ a.sanPhamId }}</h5> -->
                     <h5 class="card-text text-uppercase">{{ a.sanPhamName }}</h5>
                     <h5 class="card-text text-danger">Giá: {{ a.stringPrice }} VNĐ</h5>
                 </div>

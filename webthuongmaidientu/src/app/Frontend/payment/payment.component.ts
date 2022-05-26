@@ -31,7 +31,8 @@ export class PaymentComponent implements OnInit {
       this.cart.removeAllCart();
       this.total = this.cart.getTotalPrice().toLocaleString();
       this.soluong = this.cartList.length;
-      this.router.navigate(["/"]);
+      window.location.href = "/";
+      // this.router.navigate(["/"]);
       this.toast.success("Đặt hàng thành công", "Thông báo", { timeOut: 3000, positionClass: 'toast-top-center' });
     }
     else {
