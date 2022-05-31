@@ -4,7 +4,10 @@
     <div class="row">
         <div>
             <div class="new_product_title">
-                <h2>New Product</h2>
+                <div>
+                    <h2>New Product</h2>
+                    <hr />
+                </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-4 col-sm-6"
                         *ngFor="let a of Products | paginate: { itemsPerPage: 4, currentPage: page }">
@@ -48,6 +51,7 @@
         <div class="new_product">
             <div class="new_product_title">
                 <h2>You May Like</h2>
+                <hr />
                 <div class="row">
                     <div class="col-lg-3 col-md-4 col-sm-6"
                         *ngFor="let a of Products2 | paginate: { itemsPerPage: 4, currentPage: page }">
